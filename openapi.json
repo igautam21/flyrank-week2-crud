@@ -1,10 +1,17 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Task API",
-    "version": "1.0.0",
-    "description": "CRUD API for managing tasks"
+  "title": "Task Management API",
+  "version": "1.1.0",
+  "description": "A RESTful CRUD API built with Express.js for managing tasks.",
+  "contact": {
+    "name": "Gautam Yadav",
+    "url": "https://github.com/igautam21"
   },
+  "license": {
+    "name": "MIT"
+  }
+},
   "servers": [
     {
       "url": "http://localhost:3000"
