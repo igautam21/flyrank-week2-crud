@@ -50,19 +50,17 @@ app.get("/tasks", (req, res) => {
 });
 
 // Get one task
-app.get("/tasks/:id", (req, res) => {
-
-    const id = parseInt(req.params.id);
-
-    const task = tasks.find(t => t.id === id);
-
-    if (!task) {
-        return res.status(404).json({
-            error: `Task ${id} not found`
-        });
-    }
-
-    res.json(task);
+app.get("/", (req, res) => {
+    res.json({
+        message: "Welcome to Task Management API",
+        version: "1.1.0",
+        documentation: "http://localhost:3000/docs",
+        health: "http://localhost:3000/health",
+        endpoints: [
+            "/tasks",
+            "/tasks/:id"
+        ]
+    });
 });
 
 // Create a new task
