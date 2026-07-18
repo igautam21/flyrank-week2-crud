@@ -68,7 +68,11 @@ app.post("/tasks", (req, res) => {
 
     const { title } = req.body;
 
-    if (!title || title.trim() === "") {
+if (
+    !title ||
+    typeof title !== "string" ||
+    title.trim().length < 3
+)  {
         return res.status(400).json({
             error: "Title is required"
         });
@@ -128,9 +132,9 @@ app.delete("/tasks/:id", (req, res) => {
     const index = tasks.findIndex(t => t.id === id);
 
     if (index === -1) {
-        return res.status(404).json({
-            error: `Task ${id} not found`
-        });
+        return res.status(400).json({
+    error: "Title must contain at least 3 characters."
+});
     }
 
     tasks.splice(index, 1);
