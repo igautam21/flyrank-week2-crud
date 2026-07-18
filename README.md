@@ -1,26 +1,32 @@
 # Task API
 
-A simple CRUD API built using Node.js and Express.
+A simple RESTful CRUD API built using **Node.js**, **Express.js**, and **Swagger UI**.
 
 ## Features
 
-- Get all tasks
-- Get a task by ID
-- Create a task
-- Update a task
-- Delete a task
-- Swagger UI documentation
+- Create tasks
+- Read all tasks
+- Read task by ID
+- Update task
+- Delete task
+- Health check endpoint
+- Interactive Swagger API documentation
 
-## Technologies
+## Tech Stack
 
 - Node.js
 - Express.js
 - Swagger UI
 
-## Run
+## Installation
 
 ```bash
 npm install
+```
+
+## Run the project
+
+```bash
 node server.js
 ```
 
@@ -30,46 +36,24 @@ Server:
 http://localhost:3000
 ```
 
-Swagger:
+Swagger Documentation:
 
 ```
 http://localhost:3000/docs
 ```
 
-## Endpoints
+## API Endpoints
 
-| Method | Endpoint |
-|--------|----------|
-| GET | / |
-| GET | /health |
-| GET | /tasks |
-| GET | /tasks/:id |
-| POST | /tasks |
-| PUT | /tasks/:id |
-| DELETE | /tasks/:id |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | / | API Information |
+| GET | /health | Health Check |
+| GET | /tasks | Get All Tasks |
+| GET | /tasks/:id | Get Task By ID |
+| POST | /tasks | Create Task |
+| PUT | /tasks/:id | Update Task |
+| DELETE | /tasks/:id | Delete Task |
 
-## Example
+## Author
 
-POST /tasks
-
-```json
-{
-  "title": "Buy milk"
-}
-```
-
-Response
-
-```json
-{
-  "id": 4,
-  "title": "Buy milk",
-  "done": false
-}
-```
-
-## Swagger
-
-Add your Swagger screenshot here.
-
-![Swagger](swagger.png)
+**Gautam Yadav**
